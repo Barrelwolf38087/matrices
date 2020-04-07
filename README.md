@@ -12,6 +12,8 @@ custom types.
 As you may have noticed, this way of dealing with matrices prevents them from having sizes determined at runtime.
 At some point, I plan on adding a second type of matrix to address this problem.
 
+**Note: This library is in *very early development* and should not be used for anything. You have been warned.**
+
 ## Installation
 Add this repository as a git submodule to your project:
 `$ git submodule add https://github.com/Barrelwolf38087/matrices.git`

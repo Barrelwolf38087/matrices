@@ -18,6 +18,7 @@
 
 #include <iomanip>
 #include <functional>
+#include <type_traits>
 
 template<typename T, size_t _rows, size_t _cols>
 class matrix {
@@ -25,7 +26,9 @@ class matrix {
     T fill; // Used in as()
 
 public:
-    matrix() : matrix{0} {}
+    matrix() : matrix{0} {
+        static_assert(std::is_arithmetic_v<T>, "You must provide an initializer for non-arithmetic types.");
+    }
     explicit matrix(T init) : mat{ { init } }, fill{init} {}
 
     matrix(const matrix& other) {
@@ -74,9 +77,12 @@ public:
         }
     }
 
-    size_t rows() { return _rows; }
-    size_t cols() { return _cols; }
+    constexpr size_t rows() { return _rows; }
+    constexpr size_t cols() { return _cols; }
 
+    /**
+     * For debugging. Doesn't work with matrices of non-printable types.
+     */
     void print() {
         std::ios init{nullptr};
         init.copyfmt(std::cout);

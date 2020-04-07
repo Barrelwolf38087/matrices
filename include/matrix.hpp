@@ -63,8 +63,6 @@ public:
             return static_cast<U>(mat[i][j]);
         });
 
-
-
         return newMat;
     }
 

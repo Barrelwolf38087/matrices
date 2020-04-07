@@ -30,7 +30,7 @@ A basic example:
 #include <matrix.hpp>
 
 int main() {
-    matrix<int, 3, 3> mat{};
+    matrix<int, 3, 3> mat;
 
     mat[0][1] = 2;
 

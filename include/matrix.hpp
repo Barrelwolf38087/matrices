@@ -13,8 +13,8 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-#ifndef MAT_DEPENDENT_MATRIX_HPP
-#define MAT_DEPENDENT_MATRIX_HPP
+#ifndef MATRIX_HPP
+#define MATRIX_HPP
 
 #include <iomanip>
 #include <functional>
@@ -92,4 +92,4 @@ public:
     }
 };
 
-#endif //MAT_DEPENDENT_MATRIX_HPP
+#endif //MATRIX_HPP

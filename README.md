@@ -34,10 +34,12 @@ A basic example:
 int main() {
     matrix<int, 3, 3> mat;
 
+    // Accessed by [col][row]. I'm probably going to change this.
     mat[0][1] = 2;
 
     mat.print();
 
+    // Equivalent to static_cast-ing every element
     auto dmat = mat.as<double>();
 
     dmat[0][2] = 2.5555;
